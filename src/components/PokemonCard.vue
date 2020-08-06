@@ -43,6 +43,7 @@ export default {
             margin-bottom: 5px;
             margin-top: 25px;
         }
+
         &__types {
             list-style-type: none;
             margin: 0;
@@ -60,10 +61,11 @@ export default {
         }
 
         &__btn {
-            margin-top: 10px;
+            margin-top: 5px;
             border: 1px solid black;
             border-radius: 5px;
             padding: 5px 10px;
+            cursor: pointer;
         }
     }
 </style>
