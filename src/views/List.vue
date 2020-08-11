@@ -13,7 +13,7 @@
 import PokemonCard from "@/components/PokemonCard.vue"
 
 export default {
-    name: 'Home',
+    name: 'List',
     data() {
         return {
             pokemonList: []

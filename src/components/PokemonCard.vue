@@ -14,7 +14,7 @@
 
 <script>
 export default {
-    name: "Pokemon.vue",
+    name: "Pokemon",
     props: {
         details: {
             type: Object,
