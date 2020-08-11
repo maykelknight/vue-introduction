@@ -4,7 +4,10 @@
         <div class="pokemon-list">
             <PokemonCard :details="pokemon"
                          v-for="pokemon in sortedList"
-            ></PokemonCard>
+                         :key="pokemon.id"
+            >
+                <img :src="pokemon.image" alt="pokemon-image" />
+            </PokemonCard>
         </div>
     </section>
 </template>

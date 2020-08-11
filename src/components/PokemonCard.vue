@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <img :src="details.image" class="card__image"/>
+        <slot></slot>
         <p class="card__name">{{details.name}}</p>
         <p class="card__id">#{{details.id}}</p>
         <ul class="card__types">
