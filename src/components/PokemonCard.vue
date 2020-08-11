@@ -8,26 +8,35 @@
                 {{type}}
             </li>
         </ul>
-        <button class="card__btn">Check Details</button>
+        <button class="card__btn" @click="goToDetailsPage()">Details</button>
+        <button class="card__btn" @click="toggleFavourite()">Toggle favourite</button>
     </div>
 </template>
 
 <script>
-export default {
-    name: "Pokemon.vue",
-    props: {
-        details: {
-            type: Object,
-            required: true
+    export default {
+        name: "PokemonCard.vue",
+        props: {
+            details: {
+                type: Object,
+                required: true
+            }
+        },
+        methods: {
+            goToDetailsPage() {
+                this.$router.push(`/details/${this.details.id}`)
+            },
+            toggleFavourite() {
+                this.$emit('toggleFavourite', this.details);
+            }
         }
     }
-}
 </script>
 
 <style scoped lang="scss">
     .card {
         width: 200px;
-        height: 250px;
+        height: 300px;
         border-radius: 10px;
         margin-right: 20px;
         margin-bottom: 20px;
@@ -43,6 +52,7 @@ export default {
             margin-bottom: 5px;
             margin-top: 25px;
         }
+
         &__types {
             list-style-type: none;
             margin: 0;
@@ -60,10 +70,12 @@ export default {
         }
 
         &__btn {
-            margin-top: 10px;
+            margin: 10px auto 0;
             border: 1px solid black;
             border-radius: 5px;
             padding: 5px 10px;
+            cursor: pointer;
+            display: block;
         }
     }
 </style>
