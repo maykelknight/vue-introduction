@@ -8,7 +8,6 @@
                 {{type}}
             </li>
         </ul>
-        <button class="card__btn">Check Details</button>
     </div>
 </template>
 
@@ -58,14 +57,6 @@ export default {
                 border-radius: 5px;
                 font-size: 12px;
             }
-        }
-
-        &__btn {
-            margin-top: 5px;
-            border: 1px solid black;
-            border-radius: 5px;
-            padding: 5px 10px;
-            cursor: pointer;
         }
     }
 </style>
